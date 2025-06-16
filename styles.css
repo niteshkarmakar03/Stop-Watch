@@ -1,0 +1,126 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+  color: #fff;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  text-align: center;
+  background: #222;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px #0ff;
+}
+
+#display {
+  font-size: 3em;
+  margin: 20px 0;
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff, 0 0 15px #0ff;
+  transition: all 0.3s ease;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 1em;
+  border: none;
+  border-radius: 10px;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #0ff;
+}
+
+button:hover {
+  background-color: #555;
+  transform: scale(1.05);
+}
+
+.laps {
+  margin-top: 20px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.laps li {
+  text-align: left;
+  margin: 5px 0;
+  color: #0f0;
+  text-shadow: 0 0 5px #0f0;
+  transition: all 0.3s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+body.dark-mode .container {
+  background: #fff;
+  box-shadow: 0 0 20px #aaa;
+}
+
+body.dark-mode #display {
+  color: #111;
+  text-shadow: none;
+}
+
+body.dark-mode .laps li {
+  color: #006600;
+  text-shadow: none;
+}
+
+/* Buttons in Dark Mode */
+body.dark-mode button {
+  background-color: #ddd;
+  color: #111;
+  box-shadow: none;
+}
+
+/* Neon Hover in Light Mode Only */
+body:not(.dark-mode) button:hover {
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+body:not(.dark-mode) .laps li:hover {
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+/* Soft Hover Glow in Dark Mode */
+body.dark-mode button:hover {
+  box-shadow: 0 0 8px #00f, 0 0 12px #00f;
+  background-color: #ccc;
+}
+
+body.dark-mode .laps li:hover {
+  text-shadow: 0 0 4px #00f, 0 0 8px #00f;
+}
+
+/* Toggle Buttons */
+#darkModeToggle, #soundToggle {
+  position: fixed;
+  bottom: 20px;
+  font-size: 1.5em;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#darkModeToggle {
+  right: 60px;
+}
+
+#soundToggle {
+  right: 20px;
+}
